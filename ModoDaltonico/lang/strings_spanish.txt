@@ -1,0 +1,18 @@
+<?php
+
+$s_plugin_ModoDaltonico_name = 'Modo Daltónico';
+$s_plugin_ModoDaltonico_description = 'Plugin de accesibilidad que proporciona filtros de color para usuarios con deficiencia en la visión del color (protanopía, deuteranopía, tritanopía).';
+$s_plugin_ModoDaltonico_activar = 'Activar';
+$s_plugin_ModoDaltonico_desactivar = 'Desactivar';
+$s_plugin_ModoDaltonico_protanopia = 'Protanopía (no ve el rojo)';
+$s_plugin_ModoDaltonico_deuteranopia = 'Deuteranopía (no ve el verde)';
+$s_plugin_ModoDaltonico_tritanopia = 'Tritanopía (no ve el azul)';
+$s_plugin_ModoDaltonico_guardar = 'Guardar';
+$s_plugin_ModoDaltonico_cancelar = 'Cancelar';
+$s_plugin_ModoDaltonico_modo_activo = 'Modo Daltónico ACTIVO';
+$s_plugin_ModoDaltonico_modo_inactivo = 'Modo Daltónico INACTIVO';
+$s_plugin_ModoDaltonico_indicador_activo = 'Activo';
+$s_plugin_ModoDaltonico_configuracion = 'Modo Daltónico';
+$s_plugin_ModoDaltonico_activado = 'Activado';
+$s_plugin_ModoDaltonico_desactivado = 'Desactivado';
+$s_plugin_ModoDaltonico_tipo_contraste = 'Tipo de contraste por defecto';

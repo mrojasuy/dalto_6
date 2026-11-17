@@ -1,0 +1,136 @@
+================================================================
+GUIA DE INSTALACION Y USO - Plugin "Modo Daltonico"
+================================================================
+
+--- INSTALACION ---
+
+1. Copiar la carpeta "ModoDaltonico" (que contiene ModoDaltonico.php,
+   pages/, files/ y lang/) dentro del directorio:
+   <ruta_mantisbt>/plugins/
+
+   La estructura final debe ser:
+   plugins/ModoDaltonico/
+   ├── ModoDaltonico.php
+   ├── pages/
+   │   ├── config.php
+   │   └── toggle.php
+   ├── files/
+   │   ├── modoDaltonico.css
+   │   └── modoDaltonico.js
+   └── lang/
+       ├── strings_english.txt
+       └── strings_spanish.txt
+
+2. Ingresar a MantisBT como administrador.
+3. Ir a Administracion → Complementos (Manage → Plugins).
+4. Buscar "Modo Daltonico" en la lista de plugins disponibles.
+5. Hacer clic en "Instalar" (Install).
+
+--- CONFIGURACION ---
+
+1. Una vez instalado, hacer clic en el nombre del plugin
+   "Modo Daltonico" en la seccion de Plugins instalados.
+2. En la pagina de configuracion puede:
+   - Activar o Desactivar el plugin globalmente.
+   - Seleccionar el tipo de contraste por defecto:
+     * Protanopia (no ve el rojo)
+     * Deuteranopia (no ve el verde)
+     * Tritanopia (no ve el azul)
+3. Hacer clic en "Guardar" para aplicar los cambios.
+
+--- USO DEL BOTON FLOTANTE ---
+
+1. Al estar el plugin activado, aparecera un boton flotante
+   en la esquina inferior derecha de todas las paginas.
+2. Hacer clic en el boton para encender/apagar el modo daltonico.
+3. Hacer doble clic (o clic derecho) sobre el boton para abrir
+   el selector de modo y elegir entre:
+   - Protanopia
+   - Deuteranopia
+   - Tritanopia
+4. Al seleccionar un modo, los filtros se aplican inmediatamente.
+5. Un indicador en la esquina superior derecha confirma que
+   el modo esta activo y que tipo esta seleccionado.
+
+--- PERSISTENCIA ---
+
+La configuracion visual (activo/inactivo y tipo de contraste)
+se guarda en el almacenamiento local del navegador (localStorage).
+Esto significa que:
+- La configuracion se mantiene entre pestanas y sesiones.
+- No depende de cookies ni del servidor.
+- Cada navegador/dispositivo mantiene su propia configuracion.
+
+--- COMPATIBILIDAD ---
+
+- MantisBT 2.0 o superior
+- Navegadores: Google Chrome, Safari, Microsoft Edge
+  (versiones recientes)
+
+================================================================
+INSTALLATION AND USAGE GUIDE - "Colorblind Mode" Plugin
+================================================================
+
+--- INSTALLATION ---
+
+1. Copy the "ModoDaltonico" folder (containing ModoDaltonico.php,
+   pages/, files/, and lang/) into the directory:
+   <mantisbt_path>/plugins/
+
+   The final structure should be:
+   plugins/ModoDaltonico/
+   ├── ModoDaltonico.php
+   ├── pages/
+   │   ├── config.php
+   │   └── toggle.php
+   ├── files/
+   │   ├── modoDaltonico.css
+   │   └── modoDaltonico.js
+   └── lang/
+       ├── strings_english.txt
+       └── strings_spanish.txt
+
+2. Log in to MantisBT as an administrator.
+3. Go to Manage → Plugins.
+4. Find "Colorblind Mode" in the available plugins list.
+5. Click "Install".
+
+--- CONFIGURATION ---
+
+1. Once installed, click on the plugin name "Colorblind Mode"
+   in the Installed Plugins section.
+2. On the configuration page you can:
+   - Enable or Disable the plugin globally.
+   - Select the default contrast type:
+     * Protanopia (no red vision)
+     * Deuteranopia (no green vision)
+     * Tritanopia (no blue vision)
+3. Click "Save" to apply changes.
+
+--- USING THE FLOATING BUTTON ---
+
+1. When the plugin is enabled, a floating button appears
+   in the bottom-right corner of all pages.
+2. Click the button to turn colorblind mode on/off.
+3. Double-click (or right-click) the button to open the
+   mode selector and choose between:
+   - Protanopia
+   - Deuteranopia
+   - Tritanopia
+4. When selecting a mode, filters are applied immediately.
+5. An indicator in the top-right corner confirms that the
+   mode is active and which type is selected.
+
+--- PERSISTENCE ---
+
+The visual configuration (on/off and contrast type) is stored
+in the browser's local storage (localStorage). This means:
+- Settings persist across tabs and sessions.
+- No dependency on cookies or server storage.
+- Each browser/device maintains its own configuration.
+
+--- COMPATIBILITY ---
+
+- MantisBT 2.0 or higher
+- Browsers: Google Chrome, Safari, Microsoft Edge
+  (recent versions)

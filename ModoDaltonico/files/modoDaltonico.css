@@ -1,0 +1,145 @@
+/* ============================================================
+   Modo Daltonico - CSS Filters for Color Vision Deficiency
+   Uses SVG filters applied to <html> to remap problem colors
+   without modifying individual element colors directly.
+   ============================================================ */
+
+/* --- Floating widget container --- */
+.md-widget {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 99999;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 14px;
+	border: 2px solid #333;
+	border-radius: 30px;
+	background-color: #fff;
+	color: #333;
+	font-size: 14px;
+	font-weight: 600;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+	line-height: 1.2;
+}
+
+.md-widget-icon {
+	font-size: 18px;
+	flex-shrink: 0;
+}
+
+/* --- Mode combo selector (always visible) --- */
+.md-widget-select {
+	border: 1px solid #aaa;
+	border-radius: 6px;
+	background-color: #f9f9f9;
+	color: #333;
+	font-size: 13px;
+	padding: 4px 8px;
+	cursor: pointer;
+	max-width: 200px;
+}
+
+.md-widget-select:focus {
+	outline: 2px solid #005fcc;
+	outline-offset: 1px;
+}
+
+/* --- Toggle button (on/off) --- */
+.md-toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	padding: 6px 12px;
+	border: 2px solid #333;
+	border-radius: 20px;
+	background-color: #eee;
+	color: #333;
+	font-size: 13px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+	line-height: 1;
+}
+
+.md-toggle:hover {
+	background-color: #ddd;
+}
+
+.md-toggle:focus {
+	outline: 3px solid #005fcc;
+	outline-offset: 2px;
+}
+
+.md-toggle[aria-pressed="true"] {
+	background-color: #0057a8;
+	color: #fff;
+	border-color: #003d75;
+}
+
+.md-toggle[aria-pressed="true"]:hover {
+	background-color: #004080;
+}
+
+/* --- Active indicator badge --- */
+.md-badge {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	z-index: 99999;
+	display: none;
+	align-items: center;
+	gap: 6px;
+	padding: 6px 14px;
+	border-radius: 20px;
+	background-color: #0057a8;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 600;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+	pointer-events: none;
+}
+
+.md-badge.md-badge--visible {
+	display: flex;
+}
+
+.md-badge-dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #4caf50;
+	flex-shrink: 0;
+}
+
+/* ============================================================
+   SVG Color Remap Filters
+   Applied via CSS filter: url(#id) on <html>.
+   ============================================================ */
+
+html.md-protanopia {
+	filter: url(#md-filter-protanopia);
+}
+
+html.md-deuteranopia {
+	filter: url(#md-filter-deuteranopia);
+}
+
+html.md-tritanopia {
+	filter: url(#md-filter-tritanopia);
+}
+
+/* Ensure the widget and controls are never affected by the filter */
+.md-widget,
+.md-badge,
+.md-svg-filters {
+	filter: none !important;
+}
+
+/* Prevent filter from clipping fixed elements */
+html.md-protanopia,
+html.md-deuteranopia,
+html.md-tritanopia {
+	min-height: 100%;
+}
